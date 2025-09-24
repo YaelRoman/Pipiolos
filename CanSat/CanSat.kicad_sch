@@ -1662,54 +1662,27 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "MyLibrary:MPU-6050"
+		(symbol "MyLibrary:MPU-6500"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U"
-				(at -2.54 12.954 0)
+				(at 0.254 17.272 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "MPU-6050"
-				(at -0.254 -18.034 0)
+			(property "Value" "MPU-6500"
+				(at 0.508 15.494 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Footprint" "Sensor_Motion:InvenSense_QFN-24_4x4mm_P0.5mm"
-				(at 0 -20.32 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf"
-				(at 1.016 -25.4 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "InvenSense 6-Axis Motion Sensor, Gyroscope, Accelerometer, I2C"
-				(at 0.762 -23.368 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "mems"
+			(property "Footprint" ""
 				(at 0 0 0)
 				(effects
 					(font
@@ -1718,7 +1691,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "*QFN*4x4mm*P0.5mm*"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(effects
 					(font
@@ -1727,10 +1700,19 @@
 					(hide yes)
 				)
 			)
-			(symbol "MPU-6050_0_1"
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MPU-6500_0_1"
 				(rectangle
-					(start -6.35 10.16)
-					(end 6.35 -10.16)
+					(start -6.35 13.97)
+					(end 6.35 -13.97)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -1740,9 +1722,9 @@
 					)
 				)
 			)
-			(symbol "MPU-6050_1_1"
+			(symbol "MPU-6500_1_1"
 				(pin input line
-					(at -11.43 3.81 0)
+					(at -11.43 6.35 0)
 					(length 5.08)
 					(name "SCL"
 						(effects
@@ -1751,7 +1733,25 @@
 							)
 						)
 					)
-					(number "23"
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -11.43 3.81 0)
+					(length 5.08)
+					(name "SDA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1762,14 +1762,14 @@
 				(pin bidirectional line
 					(at -11.43 1.27 0)
 					(length 5.08)
-					(name "SDA"
+					(name "EDA"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "24"
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1777,10 +1777,10 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin output clock
 					(at -11.43 -1.27 0)
 					(length 5.08)
-					(name "AUX_DA"
+					(name "ECL"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1795,10 +1795,10 @@
 						)
 					)
 				)
-				(pin output clock
+				(pin input line
 					(at -11.43 -3.81 0)
 					(length 5.08)
-					(name "AUX_CL"
+					(name "AD0"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1813,10 +1813,28 @@
 						)
 					)
 				)
-				(pin input line
+				(pin output line
 					(at -11.43 -6.35 0)
 					(length 5.08)
-					(name "AD0"
+					(name "INT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 -8.89 0)
+					(length 5.08)
+					(name "NCS"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1832,16 +1850,34 @@
 					)
 				)
 				(pin output line
-					(at -11.43 -8.89 0)
+					(at -11.43 -11.43 0)
 					(length 5.08)
-					(name "INT"
+					(name "FSYNC"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "12"
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -10.16 11.43 0)
+					(length 3.81)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1852,24 +1888,6 @@
 				(pin power_in line
 					(at -10.16 8.89 0)
 					(length 3.81)
-					(name "VDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -10.16 6.35 0)
-					(length 3.81)
 					(name "GND"
 						(effects
 							(font
@@ -1877,7 +1895,7 @@
 							)
 						)
 					)
-					(number "18"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3597,6 +3615,100 @@
 		)
 	)
 	(symbol
+		(lib_id "MyLibrary:MPU-6500")
+		(at 116.84 132.08 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "76d1ff61-336a-4eb6-a924-6ac34c5fd477")
+		(property "Reference" "U4"
+			(at 124.46 130.8099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MPU-6500"
+			(at 124.46 133.3499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 116.84 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 116.84 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 116.84 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "8e7f1488-2769-4ef3-911b-6b8b638ef7c3")
+		)
+		(pin "3"
+			(uuid "5535d011-7295-428c-a3ea-97cf1dbe143d")
+		)
+		(pin "5"
+			(uuid "ae64f583-bcbd-4e7d-b29b-1a3a806c1fd6")
+		)
+		(pin "6"
+			(uuid "fc07f2bf-3446-4d89-8666-38bfc1f91e5d")
+		)
+		(pin "9"
+			(uuid "6fc8f534-0ead-45bd-bc1f-7de01c208ac2")
+		)
+		(pin "2"
+			(uuid "9e9adad4-c723-4f29-ae0b-29a4e7266e79")
+		)
+		(pin "1"
+			(uuid "52d339ee-ffd9-482e-a845-e7a5f5abaf2a")
+		)
+		(pin "7"
+			(uuid "4684078f-204d-40c7-a7af-9ea1a5b0b300")
+		)
+		(pin "10"
+			(uuid "1cad30a4-e052-4530-ba38-cc647ebb0901")
+		)
+		(pin "8"
+			(uuid "9b2214bc-40f2-4480-877d-0aea5d454a8f")
+		)
+		(instances
+			(project ""
+				(path "/ad8e5941-aa23-4687-a9fe-71094ed41176"
+					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Conn_01x04_Socket")
 		(at 97.79 125.73 180)
 		(unit 1)
@@ -3695,7 +3807,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical"
+		(property "Footprint" "MyLibrary:LoRa Ra-02"
 			(at 45.72 130.81 0)
 			(effects
 				(font
@@ -3774,94 +3886,6 @@
 			(project ""
 				(path "/ad8e5941-aa23-4687-a9fe-71094ed41176"
 					(reference "U2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "MyLibrary:MPU-6050")
-		(at 116.84 129.54 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ce8a97f7-0a2e-493e-a3ec-5c65da2d3b72")
-		(property "Reference" "U4"
-			(at 124.46 128.2699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MPU-6050"
-			(at 124.46 130.8099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical"
-			(at 116.84 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf"
-			(at 117.856 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "InvenSense 6-Axis Motion Sensor, Gyroscope, Accelerometer, I2C"
-			(at 117.602 152.908 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "7"
-			(uuid "0938eb43-dc3d-4524-8329-8735519489ed")
-		)
-		(pin "12"
-			(uuid "24a2e4c9-d761-4542-969e-8e98e4a1eb1f")
-		)
-		(pin "24"
-			(uuid "5cd95b7d-769f-4217-8d09-5bf4b56025d3")
-		)
-		(pin "6"
-			(uuid "1bb16893-99df-4ee8-9580-f57978df51c5")
-		)
-		(pin "23"
-			(uuid "ad69951a-d3e1-4e1f-bb09-067f9b59b87b")
-		)
-		(pin "18"
-			(uuid "72b44737-c551-4b8f-bc35-eebca349c08c")
-		)
-		(pin "9"
-			(uuid "173b1f37-ef0c-4e43-977f-cc9e6f5b310f")
-		)
-		(pin "13"
-			(uuid "171c43c5-a316-4e66-83c3-a3f8f5d7358f")
-		)
-		(instances
-			(project ""
-				(path "/ad8e5941-aa23-4687-a9fe-71094ed41176"
-					(reference "U4")
 					(unit 1)
 				)
 			)
