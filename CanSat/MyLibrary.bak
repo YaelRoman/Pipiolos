@@ -3468,7 +3468,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme280-ds002.pdf"
-			(at 1.27 -6.35 0)
+			(at 4.318 -22.606 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3477,7 +3477,7 @@
 			)
 		)
 		(property "Description" "3-in-1 sensor, humidity, pressure, temperature, I2C and SPI interface, 1.71-3.6V, LGA-8"
-			(at 1.27 -1.27 0)
+			(at 4.318 -17.526 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3506,7 +3506,7 @@
 		(symbol "BME280_0_1"
 			(rectangle
 				(start -8.89 8.89)
-				(end 8.89 -8.89)
+				(end 8.89 -3.81)
 				(stroke
 					(width 0.254)
 					(type default)
@@ -3520,14 +3520,14 @@
 			(pin power_in line
 				(at -13.97 6.35 0)
 				(length 5.08)
-				(name "VCC"
+				(name "VIN"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "8"
+				(number "1"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -3545,7 +3545,7 @@
 						)
 					)
 				)
-				(number "1"
+				(number "2"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -3556,7 +3556,7 @@
 			(pin bidirectional line
 				(at -13.97 1.27 0)
 				(length 5.08)
-				(name "SDI"
+				(name "SCL"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -3574,7 +3574,7 @@
 			(pin input line
 				(at -13.97 -1.27 0)
 				(length 5.08)
-				(name "SCK"
+				(name "SDA"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -3582,42 +3582,6 @@
 					)
 				)
 				(number "4"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input line
-				(at -13.97 -3.81 0)
-				(length 5.08)
-				(name "CSB"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -13.97 -6.35 0)
-				(length 5.08)
-				(name "SDO"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "5"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -5353,6 +5317,106 @@
 		)
 		(embedded_fonts no)
 	)
+	(symbol "LiPoBoostI2C"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at 0 10.414 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "LiPoBoostI2C_0_1"
+			(rectangle
+				(start -3.81 6.35)
+				(end 5.08 -2.54)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "LiPoBoostI2C_1_1"
+			(pin power_in line
+				(at -1.27 -17.78 90)
+				(length 5.08)
+				(name "VIN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 2.54 -17.78 90)
+				(length 5.08)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
 	(symbol "MPU-6050"
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5584,15 +5648,15 @@
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "U"
-			(at 0 16.256 0)
+			(at 0.254 17.272 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" ""
-			(at 0 0 0)
+		(property "Value" "MPU-6500"
+			(at 0.508 15.494 0)
 			(effects
 				(font
 					(size 1.27 1.27)

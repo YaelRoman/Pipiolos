@@ -4,7 +4,7 @@
 	(generator_version "9.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
-		(at 0 -25 0)
+		(at 0 -20 0)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "c6cd4eb6-1115-4974-ba54-5d7da249577b")
@@ -16,7 +16,7 @@
 		)
 	)
 	(property "Value" "LoRa Ra-02"
-		(at 0 -23.5 0)
+		(at 0 -18.5 0)
 		(unlocked yes)
 		(layer "F.Fab")
 		(uuid "077ca97c-827e-484f-993c-46a0591ecd18")
@@ -136,17 +136,6 @@
 		(layer "F.SilkS")
 		(uuid "d8f6a67a-678e-4f69-a868-7e697acc570b")
 	)
-	(fp_rect
-		(start -10.061413 -14.564484)
-		(end 10.585979 14.073174)
-		(stroke
-			(width 0.1)
-			(type default)
-		)
-		(fill no)
-		(layer "Margin")
-		(uuid "cf59b089-8b58-4fb3-99b3-d16118d541fe")
-	)
 	(fp_line
 		(start -10 8.5)
 		(end -10 -9.5)
@@ -156,6 +145,17 @@
 		)
 		(layer "F.CrtYd")
 		(uuid "73fdd8d5-a579-467a-88e6-c3464e0c086e")
+	)
+	(fp_rect
+		(start -10.061413 -14.564484)
+		(end 10.585979 14.073174)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "cf59b089-8b58-4fb3-99b3-d16118d541fe")
 	)
 	(fp_line
 		(start -9.75885 -8.678465)
@@ -198,7 +198,7 @@
 		(uuid "cd880d50-560a-401b-8a7c-875515de7c57")
 	)
 	(fp_text user "${REFERENCE}"
-		(at 0 -22 0)
+		(at 0 -17 0)
 		(unlocked yes)
 		(layer "F.Fab")
 		(uuid "b4db5d57-f953-4c8d-b543-87d16311cfe2")
