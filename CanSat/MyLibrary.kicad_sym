@@ -3443,7 +3443,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "U"
-			(at -7.62 10.16 0)
+			(at 0 12.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3451,15 +3451,15 @@
 			)
 		)
 		(property "Value" "BME280"
-			(at 8.89 10.16 0)
+			(at 0 10.414 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering"
-			(at 39.37 -12.7 0)
+		(property "Footprint" "MyLibrary:BME280"
+			(at 31.75 -23.368 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3467,8 +3467,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme280-ds002.pdf"
-			(at 4.318 -22.606 0)
+		(property "Datasheet" ""
+			(at -6.35 -17.018 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3477,7 +3477,7 @@
 			)
 		)
 		(property "Description" "3-in-1 sensor, humidity, pressure, temperature, I2C and SPI interface, 1.71-3.6V, LGA-8"
-			(at 4.318 -17.526 0)
+			(at -6.35 -11.938 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3506,7 +3506,7 @@
 		(symbol "BME280_0_1"
 			(rectangle
 				(start -8.89 8.89)
-				(end 8.89 -3.81)
+				(end 8.89 -8.89)
 				(stroke
 					(width 0.254)
 					(type default)
@@ -3520,7 +3520,7 @@
 			(pin power_in line
 				(at -13.97 6.35 0)
 				(length 5.08)
-				(name "VIN"
+				(name "VCC"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -3571,7 +3571,7 @@
 					)
 				)
 			)
-			(pin input line
+			(pin bidirectional line
 				(at -13.97 -1.27 0)
 				(length 5.08)
 				(name "SDA"
@@ -3582,6 +3582,42 @@
 					)
 				)
 				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -13.97 -3.81 0)
+				(length 5.08)
+				(name "CSB"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at -13.97 -6.35 0)
+				(length 5.08)
+				(name "SDO"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -4984,7 +5020,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MyLibrary:LoRa Ra-02"
 			(at 0 0 0)
 			(effects
 				(font
@@ -5322,23 +5358,23 @@
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "U"
-			(at 0 10.414 0)
+			(at 0 9.398 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" ""
-			(at 0 0 0)
+		(property "Value" "LiPoBoostI2C"
+			(at 0.508 7.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 0 0 0)
+		(property "Footprint" "MyLibrary:LiPoBoostI2C"
+			(at 0.508 -8.128 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5366,21 +5402,22 @@
 		)
 		(symbol "LiPoBoostI2C_0_1"
 			(rectangle
-				(start -3.81 6.35)
-				(end 5.08 -2.54)
+				(start -7.62 6.35)
+				(end 7.62 -6.35)
 				(stroke
 					(width 0)
 					(type default)
 				)
 				(fill
-					(type none)
+					(type color)
+					(color 214 217 255 1)
 				)
 			)
 		)
 		(symbol "LiPoBoostI2C_1_1"
 			(pin bidirectional line
-				(at -12.7 3.81 0)
-				(length 5.08)
+				(at -10.16 5.08 0)
+				(length 2.54)
 				(name "SDA"
 					(effects
 						(font
@@ -5396,9 +5433,9 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at -12.7 1.27 0)
-				(length 5.08)
+			(pin bidirectional clock
+				(at -10.16 2.54 0)
+				(length 2.54)
 				(name "SCL"
 					(effects
 						(font
@@ -5414,9 +5451,9 @@
 					)
 				)
 			)
-			(pin power_out line
-				(at -12.7 -1.27 0)
-				(length 5.08)
+			(pin power_in line
+				(at -10.16 0 0)
+				(length 2.54)
 				(name "GND"
 					(effects
 						(font
@@ -5432,10 +5469,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at -12.7 -3.81 0)
-				(length 5.08)
-				(name "QST"
+			(pin input line
+				(at -10.16 -2.54 0)
+				(length 2.54)
+				(name "Reset"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -5450,10 +5487,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at -12.7 -6.35 0)
-				(length 5.08)
-				(name "ALT"
+			(pin open_collector line
+				(at -10.16 -5.08 0)
+				(length 2.54)
+				(name "Alerta"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -5468,45 +5505,9 @@
 					)
 				)
 			)
-			(pin power_in line
-				(at -1.27 -17.78 90)
-				(length 5.08)
-				(name "VIN"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "10"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at 2.54 -17.78 90)
-				(length 5.08)
-				(name "GND"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "11"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 			(pin power_out line
-				(at 10.16 3.81 180)
-				(length 5.08)
+				(at 10.16 5.08 180)
+				(length 2.54)
 				(name "VOUT"
 					(effects
 						(font
@@ -5522,9 +5523,9 @@
 					)
 				)
 			)
-			(pin power_out line
-				(at 10.16 1.27 180)
-				(length 5.08)
+			(pin power_in line
+				(at 10.16 2.54 180)
+				(length 2.54)
 				(name "GND"
 					(effects
 						(font
@@ -5541,9 +5542,9 @@
 				)
 			)
 			(pin power_out line
-				(at 10.16 -1.27 180)
-				(length 5.08)
-				(name "GND"
+				(at 10.16 -2.54 180)
+				(length 2.54)
+				(name "VBAT+"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -5558,10 +5559,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 10.16 -3.81 180)
-				(length 5.08)
-				(name "QST"
+			(pin power_in line
+				(at 10.16 -5.08 180)
+				(length 2.54)
+				(name "VBAT-"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -5579,27 +5580,27 @@
 		)
 		(embedded_fonts no)
 	)
-	(symbol "MPU-6050"
+	(symbol "MPU-6500"
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "U"
-			(at -2.54 12.954 0)
+			(at 0 13.462 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "MPU-6050"
-			(at -0.254 -18.034 0)
+		(property "Value" "MPU-6500"
+			(at 0.254 11.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Sensor_Motion:InvenSense_QFN-24_4x4mm_P0.5mm"
+		(property "Footprint" "MyLibrary:MPU-6500"
 			(at 0 -20.32 0)
 			(effects
 				(font
@@ -5608,7 +5609,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf"
+		(property "Datasheet" ""
 			(at 1.016 -25.4 0)
 			(effects
 				(font
@@ -5644,218 +5645,10 @@
 				(hide yes)
 			)
 		)
-		(symbol "MPU-6050_0_1"
-			(rectangle
-				(start -6.35 10.16)
-				(end 6.35 -10.16)
-				(stroke
-					(width 0.254)
-					(type default)
-				)
-				(fill
-					(type background)
-				)
-			)
-		)
-		(symbol "MPU-6050_1_1"
-			(pin input line
-				(at -11.43 3.81 0)
-				(length 5.08)
-				(name "SCL"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "23"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -11.43 1.27 0)
-				(length 5.08)
-				(name "SDA"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "24"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -11.43 -1.27 0)
-				(length 5.08)
-				(name "AUX_DA"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "6"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin output clock
-				(at -11.43 -3.81 0)
-				(length 5.08)
-				(name "AUX_CL"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "7"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input line
-				(at -11.43 -6.35 0)
-				(length 5.08)
-				(name "AD0"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "9"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin output line
-				(at -11.43 -8.89 0)
-				(length 5.08)
-				(name "INT"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "12"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at -10.16 8.89 0)
-				(length 3.81)
-				(name "VDD"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "13"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at -10.16 6.35 0)
-				(length 3.81)
-				(name "GND"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "18"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-		)
-		(embedded_fonts no)
-	)
-	(symbol "MPU-6500"
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(property "Reference" "U"
-			(at 0.254 17.272 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "MPU-6500"
-			(at 0.508 15.494 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 0 0 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 0 0 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 0 0 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(symbol "MPU-6500_0_1"
 			(rectangle
-				(start -6.35 13.97)
-				(end 6.35 -13.97)
+				(start -6.35 10.16)
+				(end 6.35 -15.24)
 				(stroke
 					(width 0.254)
 					(type default)
@@ -5866,8 +5659,8 @@
 			)
 		)
 		(symbol "MPU-6500_1_1"
-			(pin input line
-				(at -11.43 6.35 0)
+			(pin bidirectional line
+				(at -11.43 3.81 0)
 				(length 5.08)
 				(name "SCL"
 					(effects
@@ -5885,7 +5678,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -11.43 3.81 0)
+				(at -11.43 1.27 0)
 				(length 5.08)
 				(name "SDA"
 					(effects
@@ -5903,7 +5696,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -11.43 1.27 0)
+				(at -11.43 -1.27 0)
 				(length 5.08)
 				(name "EDA"
 					(effects
@@ -5921,7 +5714,7 @@
 				)
 			)
 			(pin output clock
-				(at -11.43 -1.27 0)
+				(at -11.43 -3.81 0)
 				(length 5.08)
 				(name "ECL"
 					(effects
@@ -5938,8 +5731,8 @@
 					)
 				)
 			)
-			(pin input line
-				(at -11.43 -3.81 0)
+			(pin bidirectional line
+				(at -11.43 -6.35 0)
 				(length 5.08)
 				(name "AD0"
 					(effects
@@ -5956,8 +5749,8 @@
 					)
 				)
 			)
-			(pin output line
-				(at -11.43 -6.35 0)
+			(pin open_collector line
+				(at -11.43 -8.89 0)
 				(length 5.08)
 				(name "INT"
 					(effects
@@ -5975,7 +5768,7 @@
 				)
 			)
 			(pin input line
-				(at -11.43 -8.89 0)
+				(at -11.43 -11.43 0)
 				(length 5.08)
 				(name "NCS"
 					(effects
@@ -5992,8 +5785,8 @@
 					)
 				)
 			)
-			(pin output line
-				(at -11.43 -11.43 0)
+			(pin input line
+				(at -11.43 -13.97 0)
 				(length 5.08)
 				(name "FSYNC"
 					(effects
@@ -6011,7 +5804,7 @@
 				)
 			)
 			(pin power_in line
-				(at -10.16 11.43 0)
+				(at -10.16 8.89 0)
 				(length 3.81)
 				(name "VCC"
 					(effects
@@ -6029,7 +5822,7 @@
 				)
 			)
 			(pin power_in line
-				(at -10.16 8.89 0)
+				(at -10.16 6.35 0)
 				(length 3.81)
 				(name "GND"
 					(effects
@@ -6069,7 +5862,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MyLibrary:NE06MV2 GPS"
 			(at 0 0 0)
 			(effects
 				(font

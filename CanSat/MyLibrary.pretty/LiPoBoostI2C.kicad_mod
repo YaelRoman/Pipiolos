@@ -11430,34 +11430,6 @@
 		(remove_unused_layers no)
 		(uuid "63a3f68d-a653-4bf3-9a2b-5bbc48673e9d")
 	)
-	(pad "10" smd roundrect
-		(at -1.411896 14.438602)
-		(size 1 3.5)
-		(layers "F.Cu" "F.Mask" "F.Paste")
-		(roundrect_rratio 0.25)
-		(uuid "319a0796-f33a-42cb-974d-d8611a072853")
-	)
-	(pad "11" smd roundrect
-		(at 0.588104 14.438602)
-		(size 1 3.5)
-		(layers "F.Cu" "F.Mask" "F.Paste")
-		(roundrect_rratio 0.25)
-		(uuid "dd014c0f-c846-45d6-b191-80939f2176c9")
-	)
-	(pad "MP" smd roundrect
-		(at -3.761896 20.188602)
-		(size 1.5 3.4)
-		(layers "F.Cu" "F.Mask" "F.Paste")
-		(roundrect_rratio 0.166667)
-		(uuid "4713f682-fec2-461d-85fc-4c00a763681a")
-	)
-	(pad "MP" smd roundrect
-		(at 2.938104 20.188602)
-		(size 1.5 3.4)
-		(layers "F.Cu" "F.Mask" "F.Paste")
-		(roundrect_rratio 0.166667)
-		(uuid "66b14988-537e-4e62-ade2-ce7dd8262b63")
-	)
 	(group ""
 		(uuid "0a6612ba-507f-4969-be56-556deab0d43e")
 		(members "0189c709-e266-4968-ae47-acc5ad88429a" "05a3095c-6637-4be8-8c12-b880045403fb"
