@@ -1,0 +1,10 @@
+
+# KiCad noise
+*.kicad_sch.lck
+~*.kicad_sch.lck
+*.lck
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*-backups/
+_autosave-*
+
