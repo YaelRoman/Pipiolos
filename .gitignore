@@ -8,3 +8,13 @@
 *-backups/
 _autosave-*
 
+
+# KiCad noise
+*.kicad_pcb.lck
+~*.kicad_pcb.lck
+*.lck
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*-backups/
+_autosave-*
+
